@@ -4,7 +4,7 @@
   "description": "Convert mbox email archives to beautiful HTML files",
   "type": "module",
   "bin": {
-    "mbox-to-html": "./src/cli.ts"
+    "mbox-to-html": "src/cli.ts"
   },
   "main": "./src/index.ts",
   "files": [
