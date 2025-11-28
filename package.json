@@ -1,0 +1,41 @@
+{
+  "name": "mbox-to-html",
+  "version": "1.0.0",
+  "description": "Convert mbox email archives to beautiful HTML files",
+  "type": "module",
+  "bin": {
+    "mbox-to-html": "./src/cli.ts"
+  },
+  "main": "./src/index.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "mbox",
+    "email",
+    "html",
+    "converter",
+    "archive",
+    "mail"
+  ],
+  "author": "Ozan Turksever <ozan.turksever@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozanturksever/mbox-to-html.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ozanturksever/mbox-to-html/issues"
+  },
+  "homepage": "https://github.com/ozanturksever/mbox-to-html#readme",
+  "dependencies": {
+    "postal-mime": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  }
+}
