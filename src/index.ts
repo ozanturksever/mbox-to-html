@@ -19,12 +19,13 @@ export interface ConvertOptions {
 }
 
 // --- HTML Templates ---
-const HTML_HEADER = `<!DOCTYPE html>
+function getHtmlHeader(title: string): string {
+    return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Archive</title>
+    <title>${escapeHtml(title)}</title>
     <style>
         :root {
             --bg-color: #f4f4f9;
@@ -136,8 +137,8 @@ const HTML_HEADER = `<!DOCTYPE html>
 </head>
 <body>
     <div class="container">
-        <h1>Email Archive</h1>
 `;
+}
 
 const HTML_FOOTER = `
     </div>
@@ -230,7 +231,8 @@ async function processMboxFile(mboxPath: string, force: boolean): Promise<number
     console.log(`Processing ${mboxPath}...`);
 
     const outputStream = createWriteStream(outputPath);
-    outputStream.write(HTML_HEADER);
+    const title = basename(mboxPath);
+    outputStream.write(getHtmlHeader(title));
 
     let emailCount = 0;
 

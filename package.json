@@ -1,6 +1,6 @@
 {
   "name": "mbox-to-html",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert mbox email archives to beautiful HTML files",
   "type": "module",
   "bin": {
